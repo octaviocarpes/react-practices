@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/Navigation'
-import NewRoute from './components/NewRoute'
-import Home from './components/Home'
+import Home from './views/Home'
+import Pokemons from './views/Pokemons'
 import Error from './components/Error'
 
 import './App.css';
@@ -16,7 +16,7 @@ class App extends Component {
         <Navigation />
         <Switch>
           <Route path="/" component={ Home } exact/>
-          <Route path="/new" component={ NewRoute }/>
+          <Route path="/pokemons" component={ Pokemons }/>
           <Route component={ Error }/>
         </Switch>
         </div>

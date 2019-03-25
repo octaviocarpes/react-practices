@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import './styles.scss'
 
 class Navigation extends Component {
     render () {
         return (
-            <div>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/new">New Route</NavLink>
+            <div className="navigation">
+                <NavLink className="link" to="/">Home</NavLink>
+                <NavLink className="link" to="/pokemons">Pokémons</NavLink>
             </div>
         )
     }
