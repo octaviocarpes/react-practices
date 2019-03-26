@@ -20,6 +20,7 @@ const todoApp = (state = initialState, action: any): Object => {
 }
 
 const buildAddTodo = (state: any, action: any): Object => {
+    console.log('build todo')
     return { 
       todos: [ 
           ...state.todos,
@@ -44,6 +45,4 @@ const buildRemoveTodo = (state: any, action: any): Object => {
     }
 }
 
-export default {
-    todoApp
-}
+export default todoApp
