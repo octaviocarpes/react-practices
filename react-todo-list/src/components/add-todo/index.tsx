@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import store from '../../store'
-import actions from '../../store/actions'
 
 class AddTodo extends Component<{}, any> {
   constructor(props: any) {
@@ -12,14 +10,17 @@ class AddTodo extends Component<{}, any> {
 
   render() {
     return (
-      <div className="add-todo">
-        <input
-          value={this.state.todo}
-          type="text"
-          placeholder="Add a Todo to your list!"
-          onChange={this._handleKeyPress}
-        />
-        <button onClick={this.addTodo}>Add!</button>
+      <div className="container">
+        <div className="add-todo">
+          <input
+            value={this.state.todo}
+            type="text"
+            placeholder="Add a Todo to your list!"
+            onChange={this._handleKeyPress}
+          />
+          <button onClick={this.addTodo}>Add!</button>
+        </div>
+        <h2>{this.state.todo}</h2>
       </div>
     )
   }
@@ -30,7 +31,7 @@ class AddTodo extends Component<{}, any> {
   }
 
   addTodo = () => {
-    store.dispatch(actions.ADD_TODO(this.state.todo))
+    
   }
 }
 
