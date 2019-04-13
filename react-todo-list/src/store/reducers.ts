@@ -6,13 +6,13 @@ const initialState = {
 
 const todoApp = (state = initialState, action: any): Object => {
     switch (action.type) {
-        case actions.ADD_TODO: 
+        case 'ADD_TODO': 
             return buildAddTodo(state, action)
         
-        case actions.FINISH_TODO:
+        case 'FINISH_TODO':
             return buildFinishTodo(state, action)
 
-        case actions.REMOVE_TODO:
+        case 'REMOVE_TODO':
             return buildRemoveTodo(state, action)
 
         default: return state
@@ -20,7 +20,7 @@ const todoApp = (state = initialState, action: any): Object => {
 }
 
 const buildAddTodo = (state: any, action: any): Object => {
-    console.log('build todo')
+    console.log(state)
     return { 
       todos: [ 
           ...state.todos,

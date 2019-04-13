@@ -19,19 +19,18 @@ class AddTodo extends Component<{}, any> {
           placeholder="Add a Todo to your list!"
           onChange={this._handleKeyPress}
         />
+        <button onClick={this.addTodo}>Add!</button>
       </div>
     )
   }
 
 
   _handleKeyPress = (input: any): void => {
-    console.log(input.target.value)
-    if (input.key === 'Enter') {
-      console.log('Enter')
-      store.dispatch(actions.ADD_TODO(this.state.todo))
-    }
-
     this.setState({ todo: input.target.value })
+  }
+
+  addTodo = () => {
+    store.dispatch(actions.ADD_TODO(this.state.todo))
   }
 }
 

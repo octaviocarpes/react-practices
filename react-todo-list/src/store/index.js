@@ -3,4 +3,6 @@ import todoApp from './reducers'
 
 const store = createStore(todoApp)
 
+console.log(store)
+
 export default store
