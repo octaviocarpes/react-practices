@@ -1,0 +1,5 @@
+export default {
+  SHOW_ALL_TODOS: 'ALL',
+  SHOW_DONE_TODOS: 'DONE',
+  SHOW_UNDONE_TODOS: 'UNDONE'
+}
